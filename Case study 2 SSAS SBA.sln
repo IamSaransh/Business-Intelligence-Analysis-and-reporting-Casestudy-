@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Case study 2 SSAS SBA", "Case study 2 SSAS SBA.dwproj", "{58A09523-FF8A-4FD3-8EF8-083D0DA3F996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A09523-FF8A-4FD3-8EF8-083D0DA3F996}.Development|Default.ActiveCfg = Development
+		{58A09523-FF8A-4FD3-8EF8-083D0DA3F996}.Development|Default.Build.0 = Development
+		{58A09523-FF8A-4FD3-8EF8-083D0DA3F996}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFC74087-BBA5-4258-AE5E-16C6FB050E1E}
+	EndGlobalSection
+EndGlobal

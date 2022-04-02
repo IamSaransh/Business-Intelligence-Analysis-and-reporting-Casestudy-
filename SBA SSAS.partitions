@@ -1,0 +1,28 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5576f567-1b2f-43ab-a459-c8c76629d34c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SBA SSAS</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Employee Assignment</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e246c4c1-5119-4d40-82b3-3525dece2d08">
+          <ID>Employee Assignment</ID>
+          <Name>Employee Assignment</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="957494cf-3a0c-473a-a439-2636ce2daf57">
+            <DataSourceID>SBA SSAS</DataSourceID>
+            <QueryDefinition>SELECT A.[Employee_ID],A.[Project_ID],A.[Allocation_start_date],A.[Allocation_End_date] ,              A.[Allocation_percentage],A.[Billable],A.[Billing_Amount],A.[RPT_PK],A.Employee_ID + A.Project_ID + Billable AS [primary composite key]
+FROM [dbo].[Employee_Assignment] A INNER JOIN [dbo].[Employee_Details] B ON
+A.Employee_ID = B.Employee_ID
+WHERE B.[DOJ] &gt; '2000-01-01 00:00:00.000'</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
